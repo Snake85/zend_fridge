@@ -1,0 +1,81 @@
+[
+    {
+        "name": "grilled cheese on toast",
+        "ingredients": [
+            { "item":"bread", "amount":"2", "unit":"slices"},
+            { "item":"cheese", "amount":"2", "unit":"slices"}
+        ]
+    }
+    ,
+    {
+        "name": "salad sandwich",
+        "ingredients": [
+            { "item":"bread", "amount":"2", "unit":"slices"},
+            { "item":"mixed salad", "amount":"100", "unit":"grams"}
+        ]
+    }
+    ,
+    {
+        "name": "pasta spicy",
+        "ingredients": [
+            { "item":"pasta", "amount":"120", "unit":"grams"},
+            { "item":"garlic", "amount":"10", "unit":"grams"},
+            { "item":"extra virgin olive oil", "amount":"50", "unit":"ml"},
+            { "item":"chilli flakes", "amount":"3", "unit":"grams"}
+        ]
+    }
+    ,
+    {
+        "name": "bruschetta",
+        "ingredients": [
+            { "item":"bread", "amount":"2", "unit":"slices"},
+            { "item":"garlic", "amount":"10", "unit":"grams"},
+            { "item":"extra virgin olive oil", "amount":"25", "unit":"ml"}
+        ]
+    }
+    ,
+    {
+        "name": "pasta with salmon",
+        "ingredients": [
+            { "item":"pasta", "amount":"120", "unit":"grams"},
+            { "item":"salmon", "amount":"100", "unit":"grams"},
+            { "item":"extra virgin olive oil", "amount":"30", "unit":"ml"}
+        ]
+    }
+    ,
+    {
+        "name": "steak",
+        "ingredients": [
+            { "item":"steak", "amount":"500", "unit":"grams"},
+            { "item":"extra virgin olive oil", "amount":"20", "unit":"ml"}
+        ]
+    }
+    ,
+    {
+        "name": "salad",
+        "ingredients": [
+        	{ "item":"mixed salad", "amount":"100", "unit":"grams"},
+            { "item":"tomatoes", "amount":"100", "unit":"grams"},
+            { "item":"extra virgin olive oil", "amount":"20", "unit":"ml"}
+        ]
+    }
+    ,
+    {
+        "name": "hamburger",
+        "ingredients": [
+        	{ "item":"bread", "amount":"2", "unit":"slices"},
+        	{ "item":"mixed salad", "amount":"30", "unit":"grams"},
+            { "item":"tomatoes", "amount":"30", "unit":"grams"},
+            { "item":"steak", "amount":"200", "unit":"ml"}
+        ]
+    }
+    ,
+    {
+        "name": "pasta with mushrooms",
+        "ingredients": [
+            { "item":"pasta", "amount":"120", "unit":"grams"},
+            { "item":"mushrooms", "amount":"50", "unit":"grams"},
+            { "item":"extra virgin olive oil", "amount":"30", "unit":"ml"}
+        ]
+    }
+]

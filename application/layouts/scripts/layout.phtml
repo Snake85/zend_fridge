@@ -1,0 +1,28 @@
+<?php 
+	$this->headMeta()->appendHttpEquiv('Content-Type', 'text/html;charset=utf8'); 
+	
+	$this->headScript()->prependFile('../static/js/jquery-1.11.0.min.js');
+	
+	$this->headLink()->prependStylesheet('../static/css/general.css');
+?>
+
+<?php echo $this->doctype('XHTML1_STRICT'); ?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-GB">
+
+	<head>
+		<title>Fridge - <?php echo $this->page_title; ?></title>
+		<?php echo $this->headMeta(); ?>
+		<?php echo $this->headLink().PHP_EOL; ?>		
+		<?php echo $this->headScript().PHP_EOL; ?>
+	</head>
+	
+	<body>
+		<div id="header">
+		    <h1>WHAT TO COOK FOR TONIGHT ?</h1>
+        </div>
+        <div class="colmask leftmenu">
+			<?php echo $this->layout()->content; ?>
+		</div>
+	</body>
+	
+</html>

@@ -1,0 +1,46 @@
+
+    <?php
+        $this->headScript()->appendFile('../static/js/jquery.validate.min.js');
+        $this->headScript()->appendFile('../static/js/jquery.validate-additional-methods.min.js');
+        
+        $this->headLink()->prependStylesheet('../static/css/reset.css');
+    ?>
+	
+	<script type="text/javascript">
+	
+	$(document).ready(function() {
+		$( "#fridge_form" ).validate({
+			rules: {
+				fridge: {
+					required: true,
+					extension: "csv"
+				},
+			    recipes: {
+				    required: true,
+				    extension: "json"
+				}
+			},
+			messages: {
+				fridge: {
+					required: "Please upload a list of ingredients",
+					extension: "This file must be in CSV format"
+				},
+				recipes: {
+					required: "Please upload a list of recipes",
+					extension: "This file must be in JSON format"
+				}
+			}
+		});
+    });
+
+	</script>
+
+	<div id="container">
+	    <form id="fridge_form" action="<?php echo $this->url(array('controller' => 'recipe', 'action' => 'result'), null, true) ?>" method="post" enctype="multipart/form-data">
+		    <div><label for="fridge">List of ingredients in your fridge ( in CSV format ):</label></div>
+			<div><input type="file" name="fridge" id="fridge"/><br/></div>
+			<div><label for="recipes">List of recipes ( in JSON format ):</label></div>
+			<div><input type="file" name="recipes" id="recipes"/><br/></div>
+			<div><input type="submit" id="button_submit" name="submit" value="SUBMIT"/></div>
+		</form>
+    </div>

@@ -1,0 +1,72 @@
+	
+	<?php
+        $this->headLink()->prependStylesheet('../static/css/2column.css');
+    ?>
+    
+	<script type="text/javascript">
+	$(document).ready(function() {
+	    $("#fridge_ingredients dd").hide();
+	    $("#fridge_ingredients dt").click(function () {
+	        $(this).next("#fridge_ingredients dd").slideToggle(500);
+	        $(this).toggleClass("expanded");
+	    });
+
+	    $("#fridge_ingredients_show").click(function () {
+	    	$("#fridge_ingredients dd").slideDown( "slow", function() {});
+	    });
+	    $("#fridge_ingredients_hide").click(function () {
+	        $("#fridge_ingredients dd").slideUp( "slow", function() {});
+	    });
+	});
+	</script>
+	
+	<style>
+        #fridge_ingredients {
+            border-bottom: 1px solid black;
+        }
+    
+        #fridge_ingredients dt {
+            padding: 5px;
+            border-top: 1px solid black;
+        	font-weight: bold;
+        }
+        
+        #fridge_ingredients dd {
+            margin: 3px 0 7px 6px;
+        }
+        
+        
+    </style>
+    
+	
+	<div class="colleft">
+		<div class="col1">
+			<!-- Column right -->
+            <h2 style="color: green;">Raccomended Recipe <img height="15px" alt="-" src="../static/img/star.jpeg"/></h2>
+            <?php $reccomended_recipe[] = array_shift($this->possible_recipes); ?>
+            <div class="recipes_content" style="background-color: #E4FAE4;">
+            <?php echo $this->recipe($reccomended_recipe); ?>
+            </div> 
+
+			<h2>Other possibile Recipes</h2>
+			<div class="recipes_content">
+			<?php echo $this->recipe($this->possible_recipes); ?>
+			</div>
+			
+			<h2 style="color: red;">Not possibile Recipes</h2>
+            <div class="recipes_content" style="background-color: #FFE2E2;">
+                <?php echo $this->recipe($this->not_possible_recipes); ?>
+            </div>
+			<!-- Column right -->
+		</div>
+		<div class="col2">
+			<!-- Column left -->
+			<h2 style="text-align: center">INGREDIENTS IN THE FRIDGE</h2>
+			<p style="text-align: center; margin-bottom: 30px;">
+    			<a href="#" id="fridge_ingredients_show" onclick="return false;">Show All</a>
+    			<a href="#" id="fridge_ingredients_hide" onclick="return false;">Collapse All</a>
+			</p>
+			<?php echo $this->ingredients($this->fridge_ingredients); ?>
+			<!-- Column left -->
+		</div>
+	</div>

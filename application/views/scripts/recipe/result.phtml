@@ -43,9 +43,17 @@
 		<div class="col1">
 			<!-- Column right -->
             <h2 style="color: green;">Raccomended Recipe <img height="15px" alt="-" src="../static/img/star.jpeg"/></h2>
-            <?php $reccomended_recipe[] = array_shift($this->possible_recipes); ?>
+
+            
+
+
             <div class="recipes_content" style="background-color: #E4FAE4;">
-            <?php echo $this->recipe($reccomended_recipe); ?>
+            	<?php if(empty($this->possible_recipes)): ?>
+					<p>ORDER TAKEOUT</p>
+                <?php else: ?>
+                	<?php $reccomended_recipe[] = array_shift($this->possible_recipes); ?>
+            		<?php echo $this->recipe($reccomended_recipe); ?>
+            	<?php endif; ?>
             </div> 
 
 			<h2>Other possibile Recipes</h2>

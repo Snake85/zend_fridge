@@ -83,6 +83,8 @@ class Application_Model_Recipes
 				self::$not_possible_recipes[] = $recipe;
 			}
 		}
+		
+		return self::$possible_recipes;
 	}
 	
 	public static function get_possible_recipe()

@@ -82,12 +82,9 @@ class RecipeController extends Zend_Controller_Action
         		throw new Exception('Recipes file is empty or not well formatted!');
         	}
         
-        
-        	
-        	Application_Model_Recipes::verify_recipes($recipes, $fridge_ingredients);
-        	
+       		
         	$this->view->fridge_ingredients = $fridge_ingredients;
-        	$this->view->possible_recipes = Application_Model_Recipes::get_possible_recipe();
+        	$this->view->possible_recipes = Application_Model_Recipes::verify_recipes($recipes, $fridge_ingredients);
         	$this->view->not_possible_recipes = Application_Model_Recipes::get_not_possible_recipe();
         }
         catch (Exception $e)

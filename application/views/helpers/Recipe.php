@@ -18,9 +18,9 @@ class Zend_View_Helper_Recipe extends Zend_View_Helper_Abstract
 					    <tr>
 					        <td width="3%">
 					            <?php if(isset($ingredient['error'])) :?>
-					                <img height="13px" alt="X" src="../static/img/Red_X.png"/>
+					                <img height="13px" alt="X" src="/static/img/Red_X.png"/>
 					            <?php else: ?>
-					                <img height="15px" alt="V" src="../static/img/Green_V.png"/>
+					                <img height="15px" alt="V" src="/static/img/Green_V.png"/>
 					            <?php endif; ?>
 					        </td>
 					        <td width="25%"><?php echo $this->view->escape(ucfirst($ingredient['item'])); ?></td>

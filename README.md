@@ -5,7 +5,8 @@ Compnay TEST:
 
 Given a list of items in the fridge (presented as a csv list), and a collection of recipes (a collection of JSON formatted recipes), produce a recommendation for what to cook tonight. 
 Program should be written to take two inputs; fridge csv list, and the json recipe data. How you choose to implement this is up to you;
-Please provide a web page which takes input through a form, generates a valid result using the provided input data. Bonus points for styling the web pages
+Please provide a web page which takes input through a form, generates a valid result using the provided input data. Bonus points for styling the web pages.
+
 Input:
 fridge csv
 Format: item, amount, unit, use-by
@@ -53,12 +54,11 @@ e.g.
 ]
  
 Notes:
-An ingredient that is past its use-by date cannot be used for cooking.
-If more than one recipe is found, then preference should be given to the recipe with the closest use-by item
-If no recipe is found, the program should return “Order Takeout”
-Program should be all-inclusive and a run script (if required) included
-Please include evidence of unit testing
-Using the sample input above, the program should return "Salad Sandwich".
+- An ingredient that is past its use-by date cannot be used for cooking.
+- If more than one recipe is found, then preference should be given to the recipe with the closest use-by item
+- If no recipe is found, the program should return “Order Takeout”
+- Program should be all-inclusive and a run script (if required) included
+- Using the sample input above, the program should return "Salad Sandwich".
 
 --------------------------------------------------------------------------------------------
 
